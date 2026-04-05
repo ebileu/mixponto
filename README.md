@@ -61,7 +61,7 @@ O sistema terá uma estrutura simples, com um número reduzido de entidades e fu
  - Saída: Exclusão bem-sucedida.
 ### RF010 – Gerar Relatório de Cálculos
  - O sistema deve permitir gerar relatórios em pdf ou excel da tela de cálculos onde o usuário informa quais colunas devem ir para o relatório.
- - Entrada: Colunas.
+ - Entrada: Colunas: Horas normais, horas extras, horas faltas, carga horaria, noturno, horas noturnas extras, total,.
  - Processamento: Gerar arquivo e permitir salvar e selecionar diretório na máquina
  - Saída: Relatório gerado com sucesso.
 ### RF011 – Gerenciamento de Usuários
