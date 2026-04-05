@@ -2,7 +2,7 @@
 Começo de desenvolvimento do software de ponto web para a empresa Mix Telecomunicações, este documento apresenta os requisitos funcionais do sistema de controle de jornada a ser desenvolvido, seguindo boas práticas de arquitetura e design de software. O sistema de ponto tem como objetivo gerenciar o controle de jornada de trabalho de funcionários de diferentes empresas, com a possibilidade de registrar entradas e saídas de forma eficiente, gerar relatórios de cálculos de horas, permitir justificativas e fornecer funcionalidades de administração e edição de registros de ponto.. 
 
 ### Escopo
-O sistema terá uma estrutura simples, com um número reduzido de entidades e funcionalidades focadas no controle de jornada. Algumas limitações serão aplicadas, como a ausência de escalas ou ciclos de trabalho complexos e cálculos complexos de banco de horas. Entre as principais funcionalidades previstas estão:
+O sistema terá uma estrutura simples, com um número reduzido de entidades e funcionalidades focadas no controle de jornada. Algumas limitações serão aplicadas, como a ausência de escalas ou ciclos de trabalho complexos e cálculos de banco de horas. Entre as principais funcionalidades previstas estão:
  - Cadastro de funcionários, horários e justificativas;
  - Gerenciamento de horários de trabalho;
  - Controle de horas da jornada de trabalho do funcinonário;
