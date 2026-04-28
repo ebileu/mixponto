@@ -1,26 +1,135 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --cor-fundo: #c4c9dda4;
+    --azul-escuro: #151633;
+    --azul-claro: #2150bd;
+    --cinza: #94A3B8;
+    --branco: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1{
+    font-size: x-large;
+    font-style: none;
+    margin-bottom: 18px;
+    color: var(--branco);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+ul{list-style: none;}
+
+a{text-decoration: none;}
+
+body{
+
+    background-color: var(--cor-fundo);
+}
+/* Configurações do header */
+.cabecalho {
+    width: auto;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 258px;
+
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.lupaPesquisa{
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+
+.formPesquisa{
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    color: var(--cinza);
+}
+
+.formPesquisa input{
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+}
+
+.formPesquisa input::placeholder{
+    color: var(--cinza);
+}
+
+.infoUsuario{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.cargo {
+    font-weight: 600;
+    color: var(--azul-escuro);
+}
+
+.nomeUsuario {
+    margin-top: 2px;
+    font-size: 16px;
+    color: var(--cinza);  
+}
+
+#foto-usuario {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;    
+}
+
+/* Configurações da barra lateral */
+.barraLateral{
+    background-color: var(--azul-escuro);
+    color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    width: 258px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.barraLateral nav{
+    margin: 24px;
+}
+
+.barraLateral a{
+    color: var(--cinza);
+    padding: 0px 8px;
+}
+
+.barraLateral li{
+    margin-bottom: 8px;
+    padding: 12px 0;
+    font-size: 18px;
+}
+
+.barraLateral img{
+    margin-right: 8px;
+}
+
+.sessao-inicio{
+    background-color: var(--branco);
+    border-radius: 10px;
+}
+
+.sessao-inicio a{
+    color: var(--azul-escuro);
+    font-weight: 600;
 }
