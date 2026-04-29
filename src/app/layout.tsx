@@ -15,15 +15,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
-  return (
-    <html lang="pt-br" className={inter.variable}>
-      <body className="min-h-full flex">
-        <Sidebar />
-        <div className="flex flex-col flex-1">
-          <Header  />
-        </div>
-        <main>{children}</main>
-      </body>
-    </html>
-  );
+return (
+  <html lang="pt-br" className={inter.variable}>
+    <body className="min-h-full flex">
+      <Sidebar />
+      <div className="flex flex-col flex-1">
+        <Header  />
+      </div>
+      <main>{children}</main>
+    </body>
+  </html>
+);
 }
