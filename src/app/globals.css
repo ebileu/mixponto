@@ -18,9 +18,10 @@ h1{
     color: var(--branco);
 }
 
-main{
-    margin-left: 160px;
+main{ 
     margin-top: 32px;
+    margin-right: 32px;
+    margin-left: 160px;
 }
 
 body{background-color: var(--cor-fundo);}
