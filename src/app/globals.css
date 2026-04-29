@@ -18,19 +18,23 @@ h1{
     color: var(--branco);
 }
 
+main{
+    margin-left: 258px;
+    margin-top: 32px;
+}
+
+body{background-color: var(--cor-fundo);}
+
 ul{list-style: none;}
 
 a{text-decoration: none;}
-
-body{background-color: var(--cor-fundo);}
 
 /* Configurações do header */
 .cabecalho {
     width: auto;
     align-items: center;
-    padding: 10px 20px;
+    padding: 32px;
     margin-left: 258px;
-
 }
 
 .menu{
