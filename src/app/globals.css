@@ -18,6 +18,11 @@ h1{
     color: var(--branco);
 }
 
+main{
+    margin-left: 160px;
+    margin-top: 32px;
+}
+
 ul{list-style: none;}
 
 a{text-decoration: none;}
