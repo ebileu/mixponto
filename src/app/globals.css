@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
     --cor-fundo: #c4c9dda4;
     --azul-escuro: #151633;
@@ -11,12 +9,11 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-inter);
 }
 
 h1{
     font-size: x-large;
-    font-style: none;
     margin-bottom: 18px;
     color: var(--branco);
 }
@@ -25,10 +22,8 @@ ul{list-style: none;}
 
 a{text-decoration: none;}
 
-body{
+body{background-color: var(--cor-fundo);}
 
-    background-color: var(--cor-fundo);
-}
 /* Configurações do header */
 .cabecalho {
     width: auto;
@@ -45,6 +40,7 @@ body{
     margin-top: 8px;
 }
 
+/* Configuração da barra de pesquisa */
 .lupaPesquisa{
     height: 30px;
     width: 30px;
@@ -68,6 +64,7 @@ body{
     color: var(--cinza);
 }
 
+/* Informações do usuário */
 .infoUsuario{
     display: flex;
     align-items: center;
