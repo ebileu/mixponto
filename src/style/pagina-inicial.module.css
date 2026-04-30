@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Personalização dos cards */
+.containerCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card {
+    border-radius: 8px;
+    width: 250px;
+    height: 120px;
+    padding: 20px;
+}
+
+.card h2 {  
+    font-size: x-large;
+    font-weight: 500;
+    color: var(--cinza-escuro);
+}
+
+.card p {
+    margin-top: 8px;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: var(--azul-escuro);
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 0px 8px;
+}
+
+/* Personalização do gráfico */
+
+.containerGrafico {
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+}
+
+.grafico{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 800px;
+
+
+    font-family: "Manrope", sans-serif;
+    font-size: medium;
+    color: var(--azul-escuro);
+;
+}
+
+.diaSemanas{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    color: var(--cinza-escuro);
+    font-size: medium;
+    font-weight: 500;
+}
