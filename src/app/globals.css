@@ -1,8 +1,9 @@
 :root {
-    --cor-fundo: #c4c9dda4;
+    --cor-fundo: #c4c9dd91;
     --azul-escuro: #151633;
     --azul-claro: #2150bd;
-    --cinza: #94A3B8;
+    --cinza-claro: #94A3B8;
+    --cinza-escuro: #64748B;
     --branco: #FFFFFF;
 }
 
@@ -18,10 +19,10 @@ h1{
     color: var(--branco);
 }
 
-main{ 
-    margin-top: 32px;
-    margin-right: 32px;
+main{
     margin-left: 160px;
+    margin-right: 32px;
+    margin-top: 32px;
 }
 
 body{background-color: var(--cor-fundo);}
@@ -56,7 +57,7 @@ a{text-decoration: none;}
     display: flex;
     align-items: center;
     margin-left: 32px;
-    color: var(--cinza);
+    color: var(--cinza-escuro);
 }
 
 .formPesquisa input{
@@ -66,7 +67,7 @@ a{text-decoration: none;}
 }
 
 .formPesquisa input::placeholder{
-    color: var(--cinza);
+    color: var(--cinza-escuro);
 }
 
 /* Informações do usuário */
@@ -84,7 +85,7 @@ a{text-decoration: none;}
 .nomeUsuario {
     margin-top: 2px;
     font-size: 16px;
-    color: var(--cinza);  
+    color: var(--cinza-escuro);  
 }
 
 #foto-usuario {
@@ -96,7 +97,7 @@ a{text-decoration: none;}
 /* Configurações da barra lateral */
 .barraLateral{
     background-color: var(--azul-escuro);
-    color: var(--cinza);
+    color: var(--cinza-claro);
     display: flex;
     flex-direction: column;
     width: 258px;
@@ -112,7 +113,7 @@ a{text-decoration: none;}
 }
 
 .barraLateral a{
-    color: var(--cinza);
+    color: var(--cinza-claro);
     padding: 0px 8px;
 }
 
