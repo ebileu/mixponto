@@ -4,10 +4,122 @@
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TipoCarga{
+  DIARIA
+  SEMANAL
+  MENSAL
+  CICLICA
+}
+
+model Funcionario {
+  id Int @id @default(autoincrement())
+  nome String @db.VarChar(255)
+  cpf String @unique @db.Char(11)
+  pis String? @unique @db.Char(11)
+  dataAdmissao DateTime @db.Date
+  dataDemissao DateTime? @db.Date
+
+  fk_id_empresa Int
+  empresa Empresa @relation(fields: [fk_id_empresa], references: [id])
+
+  fk_id_horario Int
+  horario Horario @relation(fields: [fk_id_horario], references: [id])
+
+  fk_id_funcao Int
+  funcao Funcao @relation(fields: [fk_id_funcao], references: [id])
+
+  fk_id_departamento Int
+  departamento Departamento @relation(fields: [fk_id_departamento], references: [id])
+
+  @@index([fk_id_empresa])
+  @@index([fk_id_horario])
+  @@index([fk_id_funcao])
+  @@index([fk_id_departamento])
+}
+
+model Empresa {
+  id Int @id @default(autoincrement())
+  razaoSocial String @db.VarChar(255)
+  cnpj String @unique @db.Char(14)
+  endereco String @db.VarChar(255)
+  bairro String @db.VarChar(255)
+  cidade String @db.VarChar(255)
+  cep String @db.Char(8)
+  estado String @db.Char(2) 
+  pais String @db.VarChar(255)
+  nomeFantasia String? @db.VarChar(255)
+  inscricaoEstadual String?
+
+  funcionarios Funcionario[]
+  departamentos Departamento[]
+  funcoes Funcao[]
+  horarios Horario[]
+
+}
+
+model Horario {
+  id Int @id @default(autoincrement())
+  descricao String @db.VarChar(255)
+  compensacao Boolean @default(false)
+  carga TipoCarga @default(SEMANAL) 
+  tolerancia Int @db.SmallInt
+
+  fk_id_empresa Int
+  empresa Empresa @relation(fields: [fk_id_empresa], references: [id])
+
+  funcionarios Funcionario[]
+  horarioDia HorarioDia[]
+
+  @@unique([fk_id_empresa, descricao])
+  @@index([fk_id_empresa])
+}
+
+model HorarioDia{ 
+  id Int @id @default(autoincrement())
+
+  fk_id_horario Int
+  horario Horario @relation(fields: [fk_id_horario], references: [id])
+
+  diaSemana Int @db.SmallInt
+  entrada1 DateTime? @db.Time
+  saida1 DateTime? @db.Time
+  entrada2 DateTime? @db.Time
+  saida2 DateTime? @db.Time
+  folga Boolean @default(false)
+  extra Boolean @default(false)
+}
+
+model Funcao{
+  id Int @id @default(autoincrement())
+  descricao String @db.VarChar(255)
+
+  fk_id_empresa Int
+  empresa Empresa @relation(fields: [fk_id_empresa], references: [id])
+
+  funcionarios Funcionario[]
+
+  @@unique([fk_id_empresa, descricao])
+  @@index([fk_id_empresa])
+
+}
+
+model Departamento{
+  id Int @id @default(autoincrement())
+  descricao String @db.VarChar(255)
+
+  fk_id_empresa Int
+  empresa Empresa @relation(fields: [fk_id_empresa], references: [id])
+
+  funcionarios Funcionario[]
+
+  @@unique([fk_id_empresa, descricao])
+  @@index([fk_id_empresa])
 }

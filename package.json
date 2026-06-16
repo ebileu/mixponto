@@ -7,22 +7,31 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "setup": "npm install && npx prisma generate && npm run dev"
+    "setup": "npm install && npx prisma generate && npm run dev",
+    "test": "vitest run --no-file-parallelism",
+    "test:watch": "vitest"
   },
   "dependencies": {
-    "next": "16.2.3",
+    "@prisma/client": "^6.19.3",
+    "next": "^16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@prisma/adapter-pg": "^6.19.3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.19.40",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
-    "prisma": "^7.7.0",
+    "pg": "^8.20.0",
+    "prisma": "^6.19.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7"
   }
 }
