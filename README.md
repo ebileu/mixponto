@@ -100,6 +100,10 @@ O sistema terá uma estrutura simples, com um número reduzido de entidades e fu
  - VITEST (Para testar as regras de negócios)
 
 
+### Minimo produto viavel
+ - Cadastro de Funcionários (RF007)
+ - Registro de Ponto (RF014)
+ - Relatório básico (RF012)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

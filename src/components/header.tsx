@@ -24,7 +24,11 @@ export default function Header() {
         </form>
 
         <div className="infoUsuario">
-          <button className="botao-notificacao" type="button" aria-label="Notificações">
+          <button
+            className="botao-notificacao"
+            type="button"
+            aria-label="Notificações"
+          >
             <Image
               id="notificacao-icon"
               src="/notificacao-icon.svg"
