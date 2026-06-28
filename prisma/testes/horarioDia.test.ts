@@ -35,6 +35,7 @@ async function criarBaseFuncionario(){
             cep: '12345000',
             estado: 'ST',
             pais: 'Brasil',
+            numero: '123',
         },
     });
 

@@ -35,6 +35,7 @@ async function criarBase(){
             cep: '12345000',
             estado: 'ST',
             pais: 'Brasil',
+            numero: '123',
         },
     });
         
@@ -92,7 +93,6 @@ describe('Horario Model Testes', () => {
     });
 
     it('Não deve permitir criar com empresa inexistente', async () => {
-        const {empresa} = await criarBase();
         await expect(prisma.horario.create({
             data: {
                 descricao: 'Horario Teste',
@@ -135,6 +135,7 @@ describe('Horario Model Testes', () => {
                 cep: '12345000',
                 estado: 'ST',
                 pais: 'Brasil',
+                numero: '123',
             },
         });
 

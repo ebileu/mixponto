@@ -35,6 +35,7 @@ async function criarBase(){
             cep: '12345000',
             estado: 'ST',
             pais: 'Brasil',
+            numero: '123',
         },
     });
         
@@ -105,6 +106,7 @@ describe('Função Model Tests', () => {
                 cep: '09876543',
                 estado: 'ST',
                 pais: 'Brasil',
+                numero: '456',
             }
         });
         await prisma.funcao.create({

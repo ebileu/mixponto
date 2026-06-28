@@ -24,6 +24,7 @@ async function main(){
             estado: 'BA',
             pais: 'Brasil',
             nomeFantasia: 'MIXCOM',
+            numero: '1890'
         }
     })
 

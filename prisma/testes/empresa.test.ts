@@ -36,6 +36,7 @@ describe('Empresa Model Tests', () => {
                 cep: '12345000',
                 estado: 'ST',
                 pais: 'Brasil',
+                numero: '123',
             },
         });
 
@@ -54,6 +55,7 @@ describe('Empresa Model Tests', () => {
                 cep: '12345000',
                 estado: 'ST',
                 pais: 'Brasil',
+                numero: '123',
             },
         });
 
@@ -68,6 +70,7 @@ describe('Empresa Model Tests', () => {
                     cep: '12345000',
                     estado: 'ST',
                     pais: 'Brasil',
+                    numero: '123',
                 },
             })
         ).rejects.toMatchObject({
@@ -88,6 +91,7 @@ describe('Empresa Model Tests', () => {
                 pais: 'Brasil',
                 nomeFantasia: null,
                 inscricaoEstadual: null,
+                numero: '123',
             },
         });
 
@@ -108,6 +112,7 @@ describe('Empresa Model Tests', () => {
                     cep: '12345000',
                     estado: 'ST',
                     pais: 'Brasil',
+                    numero: '123',
                 },
             })
         ).rejects.toThrow('Argument `cnpj` must not be null');

@@ -55,8 +55,13 @@ model Empresa {
   cep String @db.Char(8)
   estado String @db.Char(2) 
   pais String @db.VarChar(255)
+  numero String @db.VarChar(20)
   nomeFantasia String? @db.VarChar(255)
   inscricaoEstadual String?
+  responsavelNome String? @db.VarChar(255)
+  responsavelCargo String? @db.VarChar(255)
+  responsavelEmail String? @db.VarChar(255)
+  ativo Boolean @default(true)
 
   funcionarios Funcionario[]
   departamentos Departamento[]
